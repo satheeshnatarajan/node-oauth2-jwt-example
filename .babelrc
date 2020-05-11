@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "env": {
+    "debug": {
+      "sourceMaps": "inline",
+      "retainLines": true
+    }
+  },
+  "plugins": [
+    ["@babel/transform-runtime"]
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}

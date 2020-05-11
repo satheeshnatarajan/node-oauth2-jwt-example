@@ -1,0 +1,41 @@
+{
+  "name": "node-oauth2-jwt-example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "npm run start:dev",
+    "start:dev": "cross-env NODE_ENV=development nodemon ./src/bin/www",
+    "start:prod": "cross-env NODE_ENV=production node ./src/bin/www",
+    "elint": "eslint .",
+    "elint:fix": "eslint . --fix",
+    "prettier": "prettier  --check '**/*.js' ",
+    "prettier:fix": "prettier --check --write '**/*.js' ",
+    "db:drop": "cross-env NODE_ENV=development sequelize db:drop",
+    "db:create": "cross-env NODE_ENV=development sequelize db:create",
+    "db:migrate": "cross-env NODE_ENV=development sequelize db:migrate",
+    "db:seed:all": "cross-env NODE_ENV=development sequelize db:seed:all"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.0",
+    "http-errors": "^1.7.3",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.7.0",
+    "oauth2-server": "^3.0.1",
+    "sequelize": "^5.21.6",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^5.2.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^1.19.2",
+    "prettier": "^2.0.4",
+    "sequelize-cli": "^5.5.1",
+    "uuid": "^3.3.3"
+  }
+}

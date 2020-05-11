@@ -1,0 +1,29 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "eslint:recommended",
+        "plugin:prettier/recommended"
+    ],
+    "rules": {
+        "no-var": "error",
+        "prefer-const": "error",
+        "object-curly-newline": "off",
+        "no-unused-vars": "warn",
+        "linebreak-style": 0,
+        "max-len": [
+            "error",
+            {
+                "code":  120,
+                "tabWidth": 4
+            }
+        ]
+    },
+    "env": {
+        "amd": true,
+        "node": true
+    },
+    "globals": {
+        "sequelize": true,
+        "logger": true
+    }
+}
