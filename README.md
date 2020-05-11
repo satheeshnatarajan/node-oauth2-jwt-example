@@ -33,7 +33,7 @@ Use cURL / Postman to validate Authorization and Authentication API
 NOTE: Basic token should be replaced by btoa(clientId:clientSecret) which configure in environment variables
  - Login API
 > curl --location --request POST 'http://localhost:5000/auth/login' \
-> --header 'Authorization: Basic <clientId:clientSecret>' \
+> --header 'Authorization: Basic `clientId:clientSecret`' \
 > --header 'Content-Type: application/x-www-form-urlencoded' \
 > --data-urlencode 'grant_type=password' \
 > --data-urlencode 'username=admin' \
@@ -41,7 +41,7 @@ NOTE: Basic token should be replaced by btoa(clientId:clientSecret) which config
 
 - Get All Users Secure API (Replace accesstoken from login api response)
 > curl --location --request GET 'http://localhost:5000/api/v1/users' \
---header 'Authorization: Bearer <accesstoken>'
+--header 'Authorization: Bearer `accesstoken`'
 
 
 # 4) Logger
